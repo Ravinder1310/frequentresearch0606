@@ -1,4 +1,4 @@
-import {  GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS } from "./actionTypes";
+import {  ADD_USER_SUCCESS, GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS } from "./actionTypes";
 
 
 const initialState = {
@@ -15,6 +15,8 @@ export const reducer=(state=initialState,{type,payload})=>{
         return {...state,isLoading:false,user:payload}
     case GET_USER_FAILURE:
         return {...state,isError:true}
+    case ADD_USER_SUCCESS:
+            return {...state,user:payload}    
     default :
         return state;
  }
