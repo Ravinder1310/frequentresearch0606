@@ -9,7 +9,7 @@ const userSchema = Schema({
     state:String,
     city:String,
     gender:String,
-    date_of_birth:Number,
+    date_of_birth:String,
     age:Number,
 })
 
