@@ -17,7 +17,7 @@ userRouter.post("/addUser",async(req,res)=>{
     try {
           const user = new userModel(payload)
           await user.save();
-          res.send("User has been registered"); 
+          res.send(user); 
 
     } catch (error) {
           res.send(error.message)
